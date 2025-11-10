@@ -134,3 +134,40 @@ const project_track = document.querySelector('.carousel-project-track');
     }
     project_track.style.transform = `translateX(${project_currentPosition}px)`;
   });
+
+const BIN_URL = "https://api.jsonbin.io/v3/b/691201a9ae596e708f509dd8";
+const ACCESS_KEY = "$2a$10$qwZ6WaR262gMs5GyrQ4Yo.ZjKGXY7EvujYVbLUtyrF7G2YSEAh.vK"; // use "X-Access-Key"
+
+async function updateCounter() {
+    try {
+        // 1. Get current count
+        let res = await fetch(BIN_URL, {
+            headers: {
+                "X-Access-Key": ACCESS_KEY
+            }
+        });
+        let data = await res.json();
+        let currentCount = data.record.count;
+
+        // 2. Increase count by 1
+        let newCount = currentCount + 1;
+
+        // 3. Update bin with new count
+        await fetch(BIN_URL, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Access-Key": ACCESS_KEY
+            },
+            body: JSON.stringify({ count: newCount })
+        });
+
+        // 4. Display on page
+        document.getElementById("visitorCount").innerText = newCount;
+
+    } catch (err) {
+        console.error("Error:", err);
+    }
+}
+
+updateCounter();
