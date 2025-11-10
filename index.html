@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dayanithi's Portfolio</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaquerie.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Portfolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#Skills" >Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#Team_members">Team Members</a></li>
+          <li><a href="#contact" >Contact</a></li>
+          <button id="changeTheme" class="btn btn-color-1">Change Theme</button>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Portfolio</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#Skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#Team_members" onclick="toggleMenu()">Team Members</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <button id="changeTheme1" class="btn btn-color-1">Change Theme</button>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Dayanithi profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Dayanithi S V</h1>
+        <p class="section__text__p2">Aspiring Developer</p>
+        <div class="btn-container">
+          <a href="https://drive.google.com/file/d/1cOY_RDb5bT5kw3JYD3F8eCrbrpeaqAFd/view?usp=sharing" target="_blank">
+          <button
+            class="btn btn-color-2"
+          >
+            Resume
+          </button>
+          </a>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <a href="https://www.linkedin.com/in/dayanithi-sv/" target="_blank">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+          />
+          </a>
+          <a href="https://github.com/Dayanithi-8148" target="_blank">
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+          />
+          </a>
+          <a href="https://www.instagram.com/__.davis__/" target="_blank">
+            <img
+              src="./assets/instagram.png"
+              alt="My Instagram profile"
+              class="icon"
+            />
+          </a>
+
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Skills</h3>
+              <p>Java</p>
+              <p>Python</p>
+              <p>C</p>
+              <p>Problem Solving</p>
+              <p>Web Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <h5>BE.,CSE(Cyber Security) - 2022-2026</h5>
+              <p>CGPA : 8.7</p>
+              <h5>High School - 2020-2022</h5>
+              <p>12th Grade - 75.6%<br/>10th Grade - 72%</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Passionate software developer and cybersecurity enthusiast with expertise in Java, Python, HTML, CSS, and C. Skilled in data structures, algorithms, and problem-solving. Experience includes developing a hand gesture detection and lighting control system and an AI-based number plate recognition surveillance system. Knowledgeable in Linux, computer networks, and cybersecurity tools. Eager to learn and collaborate on innovative tech projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="Skills-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="Skills-sub-title">Technologies Stack</h2><br/>
+            <br/>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>c</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Kali Linux</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="Skills-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <!-- <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div> -->
+            <h2 class="Skills-sub-title project-title">HAND GESTURE DETECTION AND LIGHTING CONTROL</h2>
+            <p>Enabled gesture-controlled home automation for
+              improved accessibility.</p>
+            <p>Integrated hardware and software components to
+              streamline appliance control for physically disabled
+              individuals.</p><br/>
+            <div class="btn-container">
+              <a href="https://github.com/Dayanithi-8148" target="_blank">
+              <button
+                class="btn btn-color-2 project-btn"
+              >
+                Github
+              </button>
+              </a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <!-- <div class="article-container">
+              <img
+                src="./assets/profile-pic.png"
+                alt="Project 2"
+                class="project-img">
+            </div> -->
+            <h2 class="Skills-sub-title project-title">SURVILLENCE SYSTEM WITH AI BASED NUMBER PALATE
+              RECOGNITION</h2>
+            <p>
+              The system captures vehicle images, detects and segments
+              license plates.</p>
+            <p>Employed Optical Character Recognition (OCR) to convert
+              plate numbers into readable text.</p>
+            <p>Enhanced traffic management, security monitoring, and
+              parking automation.
+            </p><br/>
+            <div class="btn-container">
+              <a href="https://github.com/Dayanithi-8148" target="_blank">
+              <button
+                class="btn btn-color-2 project-btn"
+              >
+                Github
+              </button>
+              </a>
+              
+            </div>
+          </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Team_members">
+      <p class="section__text__p1">Meet my collaboraters</p>
+      <h1 class="title">Team Members</h1><br/>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">❮</button>
+        <div id="carousel-btn" class="carousel-track-container">
+          <div class="carousel-track">
+            <div class="card color-container team-details-container">
+              <img src="./assets/team-member-1.png" alt="Profile Picture">
+              <h2>Madhanraj T</h2>
+              <p>Worked on the projects involving Hand Gesture Detection And Lighting Control and Surveillance System With AI Based Number Plate Recognition</p>
+              <br/>
+              <a href="https://www.linkedin.com/in/madhan-raj-8167022a0/" target="_blank">
+                <button class="btn btn-color-2 project-btn">LinkedIn</button>
+              </a>
+            </div>
+            <div class="card color-container team-details-container">
+              <img src="./assets/team-member-2.png" alt="Profile Picture">
+              <h2>Mahendiran M</h2>
+              <p>Worked on the project involving Hand Gesture Detection And Lighting Control</p>
+              <br/>
+              <a href="https://www.linkedin.com/in/mahendiran-m-a24489233/" target="_blank">
+                <button class="btn btn-color-2 project-btn">LinkedIn</button>
+              </a>
+            </div>
+            <div class="card color-container team-details-container">
+              <img src="./assets/team-member-3.png" alt="Profile Picture">
+              <h2>Jerom Pal Singh D</h2>
+              <p>Worked on the project involving Optimization of water supply management system</p>
+              <br/>
+              <a href="https://www.linkedin.com/in/jerom-pal-singh-b823b2294/" target="_blank">
+                <button class="btn btn-color-2 project-btn">LinkedIn</button>
+              </a>
+            </div>
+            <div class="card color-container team-details-container">
+              <img src="./assets/team-member-4.png" alt="Profile Picture">
+              <h2>Nithya S B</h2>
+              <p>Worked on the project involving Optimization of water supply management system</p>
+              <br/>
+              <a href="https://www.linkedin.com/in/nithya-s-b-a098122a3/" target="_blank">
+                <button class="btn btn-color-2 project-btn">LinkedIn</button>
+              </a>
+            </div>
+            <div class="card color-container team-details-container">
+              <img src="./assets/team-member-5.png" alt="Profile Picture">
+              <h2>Madhana Vignesh G T</h2>
+              <p>Worked on the project involving Hand Gesture Detection And Lighting Control</p>
+              <br/>
+              <a href="https://www.linkedin.com/in/madhana-vignesh-g-t-7a68122a3/" target="_blank">
+                <button class="btn btn-color-2 project-btn">LinkedIn</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button id="carousel-btn" class="carousel-btn next">❯</button>
+      </div>        
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=dayanithisv@gmail.com" target="_blank">dayanithisv@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/dayanithi-sv/ " target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Dayanithi S V. All Rights Reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
