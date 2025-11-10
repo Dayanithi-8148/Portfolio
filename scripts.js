@@ -7,41 +7,49 @@ function toggleMenu() {
 
 const themes = [
   {
+    backgroundImage : 'url(./assets/background-new.png)',
     bodyBackground: 'linear-gradient(to bottom right,#f4d5d5,#f8a9a9)',
     detailsBackground: '#ffcccc',
     colorBackground: '#ffcccc',
   },
   {
+    backgroundImage : 'url(./assets/background-new.png)',
     bodyBackground: 'linear-gradient(to bottom right, #e1f4fb, #4eb7ec)',
     detailsBackground: '#cceeff',
     colorBackground: '#cceeff',
   },
   {
+    backgroundImage : 'url(./assets/background-new.png)',
     bodyBackground: 'linear-gradient(to bottom right, #d9f4c4, #84ff71)',
     detailsBackground: '#ccffcc',
     colorBackground: '#ccffcc',
   },
   {
+    backgroundImage : 'url(./assets/background-new.png)',
     bodyBackground: 'linear-gradient(to bottom right,#f6ddf9, #f99afc)',
     detailsBackground: '#f3ccff',
     colorBackground: '#f3ccff',
   },
   {
+    backgroundImage : 'url(./assets/background-new.JPG)',
     bodyBackground: 'linear-gradient(to bottom right, #f7ddc2, #ffc098)',
-    detailsBackground: '#ffe6cc',
-    colorBackground: '#ffe6cc',
+    detailsBackground: '#facc9bff',
+    colorBackground: '#f4d3b0ff',
   },
   {
-    bodyBackground: 'white',
-    detailsBackground: 'white',
-    colorBackground: 'white',
+    backgroundImage : 'url(./assets/background-white.png)',
+    bodyBackground: '#ffffff',
+    detailsBackground: '#ffffff',
+    colorBackground: '#ffffff',
   },
   {
+    backgroundImage : 'url(./assets/background-new.png)',
     bodyBackground: '#3c3c3c',
     detailsBackground: '#282828',
     colorBackground: '#282828',
   },
   {
+    backgroundImage : 'url(./assets/background-new.png)',
     bodyBackground: 'linear-gradient(to bottom right, #ffffcf, #efe57d)',
     detailsBackground: '#ffff78',
     colorBackground: '#ffff78',
@@ -51,6 +59,10 @@ const themes = [
 let currentThemeIndex = 0;
 function applyTheme(theme) {
   document.body.style.background = theme.bodyBackground;
+
+  if(window.innerWidth >=768){
+    document.body.style.backgroundImage = theme.backgroundImage || 'cover';
+  }
   
   const detailsContainers = document.querySelectorAll('.details-container');
   detailsContainers.forEach(container => {

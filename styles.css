@@ -9,8 +9,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-image: url('./assets/background-new.png'); 
   background:linear-gradient(to bottom right, #ffffcf, #efe57d);
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -410,7 +412,7 @@ article .icon {
   text-align: center;
   border-radius: 25px;
   margin:0px;
-  height: 80vh;
+  height: 78vh;
 }
 
 .card-project img {
