@@ -383,6 +383,75 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+
+.carousel-project-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-project-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-project-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card-project {
+  flex:0 0 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  margin:0px;
+  height: 80vh;
+}
+
+.card-project img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-details-container {
+  padding: 1.5rem;
+  background: #ffff78;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.carousel-project-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color:rgb(0, 0, 0);
+  background:rgb(255, 255, 255);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-project-btn.prev {
+  left: 2px;
+}
+
+.carousel-project-btn.next {
+  right: 2px;
+}
+
+
+
 /* CONTACT */
 
 #contact {

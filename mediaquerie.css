@@ -104,4 +104,7 @@
   .card{
     flex:0 0 100%;
   }
+  .card-project{
+    flex:0 0 100%;
+  }
 }

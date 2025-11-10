@@ -97,3 +97,28 @@ const track = document.querySelector('.carousel-track');
     }
     track.style.transform = `translateX(${currentPosition}px)`;
   });
+
+
+const project_track = document.querySelector('.carousel-project-track');
+  const project_prevButton = document.querySelector('.carousel-project-btn.prev');
+  const project_nextButton = document.querySelector('.carousel-project-btn.next');
+  const project_cardWidth = document.querySelector('.card-project').offsetWidth; 
+
+  let project_currentPosition = 0;
+
+  project_nextButton.addEventListener('click', () => {
+    const maxScroll = -(project_track.scrollWidth - project_track.parentElement.offsetWidth);
+    project_currentPosition -= project_cardWidth;
+    if (project_currentPosition < maxScroll) {
+      project_currentPosition = 0; 
+    }
+    project_track.style.transform = `translateX(${project_currentPosition}px)`;
+  });
+
+  project_prevButton.addEventListener('click', () => {
+    project_currentPosition += project_cardWidth;
+    if (project_currentPosition > 0) {
+      project_currentPosition = -(project_track.scrollWidth - project_track.parentElement.offsetWidth); 
+    }
+    project_track.style.transform = `translateX(${project_currentPosition}px)`;
+  });
