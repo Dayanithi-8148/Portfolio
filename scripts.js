@@ -149,7 +149,7 @@ async function updateCounter() {
         let data = await res.json();
         let currentCount = data.record.count;
 
-        let newCount = 0 ; //currentCount + 1;
+        let newCount = currentCount + 1;
 
         await fetch(BIN_URL, {
             method: "PUT",
