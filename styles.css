@@ -576,3 +576,10 @@ footer p {
   text-align: center;
 }
 
+/* VISITOR COUNTER */
+
+.visitor-count-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}

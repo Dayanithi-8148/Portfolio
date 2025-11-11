@@ -136,11 +136,10 @@ const project_track = document.querySelector('.carousel-project-track');
   });
 
 const BIN_URL = "https://api.jsonbin.io/v3/b/691201a9ae596e708f509dd8";
-const ACCESS_KEY = "$2a$10$qwZ6WaR262gMs5GyrQ4Yo.ZjKGXY7EvujYVbLUtyrF7G2YSEAh.vK"; // use "X-Access-Key"
+const ACCESS_KEY = "$2a$10$qwZ6WaR262gMs5GyrQ4Yo.ZjKGXY7EvujYVbLUtyrF7G2YSEAh.vK"; 
 
 async function updateCounter() {
     try {
-        // 1. Get current count
         let res = await fetch(BIN_URL, {
             headers: {
                 "X-Access-Key": ACCESS_KEY
@@ -149,10 +148,8 @@ async function updateCounter() {
         let data = await res.json();
         let currentCount = data.record.count;
 
-        // 2. Increase count by 1
         let newCount = currentCount + 1;
 
-        // 3. Update bin with new count
         await fetch(BIN_URL, {
             method: "PUT",
             headers: {
@@ -162,7 +159,6 @@ async function updateCounter() {
             body: JSON.stringify({ count: newCount })
         });
 
-        // 4. Display on page
         document.getElementById("visitorCount").innerText = newCount;
 
     } catch (err) {
