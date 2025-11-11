@@ -7,32 +7,26 @@ function toggleMenu() {
 
 const themes = [
   {
-    backgroundImage : 'url(./assets/background-new.png)',
-    bodyBackground: 'linear-gradient(to bottom right,#f4d5d5,#f8a9a9)',
-    detailsBackground: '#ffcccc',
-    colorBackground: '#ffcccc',
-  },
-  {
-    backgroundImage : 'url(./assets/background-new.png)',
+    backgroundImage : 'url(./assets/background-blue.png)',
     bodyBackground: 'linear-gradient(to bottom right, #e1f4fb, #4eb7ec)',
     detailsBackground: '#cceeff',
     colorBackground: '#cceeff',
   },
   {
-    backgroundImage : 'url(./assets/background-new.png)',
+    backgroundImage : 'url(./assets/background-green.png)',
     bodyBackground: 'linear-gradient(to bottom right, #d9f4c4, #84ff71)',
     detailsBackground: '#ccffcc',
     colorBackground: '#ccffcc',
   },
   {
-    backgroundImage : 'url(./assets/background-new.png)',
+    backgroundImage : 'url(./assets/background-pink.png)',
     bodyBackground: 'linear-gradient(to bottom right,#f6ddf9, #f99afc)',
     detailsBackground: '#f3ccff',
     colorBackground: '#f3ccff',
   },
   {
-    backgroundImage : 'url(./assets/background-new.JPG)',
-    bodyBackground: 'linear-gradient(to bottom right, #f7ddc2, #ffc098)',
+    backgroundImage : 'url(./assets/background-orange.png)',
+    bodyBackground: 'linear-gradient(to bottom right, #f7dfc4ff, #ffc098)',
     detailsBackground: '#facc9bff',
     colorBackground: '#f4d3b0ff',
   },
@@ -43,13 +37,13 @@ const themes = [
     colorBackground: '#ffffff',
   },
   {
-    backgroundImage : 'url(./assets/background-new.png)',
+    backgroundImage : 'url(./assets/background-black.png)',
     bodyBackground: '#3c3c3c',
-    detailsBackground: '#282828',
-    colorBackground: '#282828',
+    detailsBackground: '#303030',
+    colorBackground: '#303030',
   },
   {
-    backgroundImage : 'url(./assets/background-new.png)',
+    backgroundImage : 'url(./assets/background-yellow.png)',
     bodyBackground: 'linear-gradient(to bottom right, #ffffcf, #efe57d)',
     detailsBackground: '#ffff78',
     colorBackground: '#ffff78',
@@ -62,6 +56,12 @@ function applyTheme(theme) {
 
   if(window.innerWidth >=768){
     document.body.style.backgroundImage = theme.backgroundImage || 'cover';
+  }
+
+  if(theme.bodyBackground === '#3c3c3c'){
+    document.body.classList.add("changeColor");
+  }else{
+    document.body.classList.remove("changeColor");
   }
   
   const detailsContainers = document.querySelectorAll('.details-container');
@@ -137,35 +137,35 @@ const project_track = document.querySelector('.carousel-project-track');
 
 
 
-// const BIN_URL = "https://api.jsonbin.io/v3/b/691201a9ae596e708f509dd8";
-// const ACCESS_KEY = "$2a$10$qwZ6WaR262gMs5GyrQ4Yo.ZjKGXY7EvujYVbLUtyrF7G2YSEAh.vK"; 
+const BIN_URL = "https://api.jsonbin.io/v3/b/691201a9ae596e708f509dd8";
+const ACCESS_KEY = "$2a$10$qwZ6WaR262gMs5GyrQ4Yo.ZjKGXY7EvujYVbLUtyrF7G2YSEAh.vK"; 
 
-// async function updateCounter() {
-//     try {
-//         let res = await fetch(BIN_URL, {
-//             headers: {
-//                 "X-Access-Key": ACCESS_KEY
-//             }
-//         });
-//         let data = await res.json();
-//         let currentCount = data.record.count;
+async function updateCounter() {
+    try {
+        let res = await fetch(BIN_URL, {
+            headers: {
+                "X-Access-Key": ACCESS_KEY
+            }
+        });
+        let data = await res.json();
+        let currentCount = data.record.count;
 
-//         let newCount = currentCount + 1;
+        let newCount = currentCount + 1;
 
-//         await fetch(BIN_URL, {
-//             method: "PUT",
-//             headers: {
-//                 "Content-Type": "application/json",
-//                 "X-Access-Key": ACCESS_KEY
-//             },
-//             body: JSON.stringify({ count: newCount })
-//         });
+        await fetch(BIN_URL, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Access-Key": ACCESS_KEY
+            },
+            body: JSON.stringify({ count: newCount })
+        });
 
-//         document.getElementById("visitorCount").innerText = newCount;
+        document.getElementById("visitorCount").innerText = newCount;
 
-//     } catch (err) {
-//         console.error("Error:", err);
-//     }
-// }
+    } catch (err) {
+        console.error("Error:", err);
+    }
+}
 
-// updateCounter();
+updateCounter();

@@ -9,10 +9,12 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url('./assets/background-new.png'); 
-  background:linear-gradient(to bottom right, #ffffcf, #efe57d);
+  background-image: url('./assets/background-yellow.png'); 
 }
 
+body.changeColor *{
+  color: white;
+}
 
 html {
   scroll-behavior: smooth;
