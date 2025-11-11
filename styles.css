@@ -99,6 +99,10 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+.hamburger-icon.change span{
+  background-color: white;
+}
+
 .menu-links {
   position: absolute;
   top: 100%;

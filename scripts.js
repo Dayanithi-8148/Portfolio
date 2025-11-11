@@ -53,15 +53,14 @@ const themes = [
 let currentThemeIndex = 0;
 function applyTheme(theme) {
   document.body.style.background = theme.bodyBackground;
-
-  if(window.innerWidth >=768){
-    document.body.style.backgroundImage = theme.backgroundImage || 'cover';
-  }
+  document.body.style.backgroundImage = theme.backgroundImage || 'cover';
 
   if(theme.bodyBackground === '#3c3c3c'){
     document.body.classList.add("changeColor");
+    document.querySelector(".hamburger-icon").classList.add("change");
   }else{
     document.body.classList.remove("changeColor");
+    document.querySelector(".hamburger-icon").classList.remove("change");
   }
   
   const detailsContainers = document.querySelectorAll('.details-container');
