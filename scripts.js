@@ -135,35 +135,37 @@ const project_track = document.querySelector('.carousel-project-track');
     project_track.style.transform = `translateX(${project_currentPosition}px)`;
   });
 
-const BIN_URL = "https://api.jsonbin.io/v3/b/691201a9ae596e708f509dd8";
-const ACCESS_KEY = "$2a$10$qwZ6WaR262gMs5GyrQ4Yo.ZjKGXY7EvujYVbLUtyrF7G2YSEAh.vK"; 
 
-async function updateCounter() {
-    try {
-        let res = await fetch(BIN_URL, {
-            headers: {
-                "X-Access-Key": ACCESS_KEY
-            }
-        });
-        let data = await res.json();
-        let currentCount = data.record.count;
 
-        let newCount = currentCount + 1;
+// const BIN_URL = "https://api.jsonbin.io/v3/b/691201a9ae596e708f509dd8";
+// const ACCESS_KEY = "$2a$10$qwZ6WaR262gMs5GyrQ4Yo.ZjKGXY7EvujYVbLUtyrF7G2YSEAh.vK"; 
 
-        await fetch(BIN_URL, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-                "X-Access-Key": ACCESS_KEY
-            },
-            body: JSON.stringify({ count: newCount })
-        });
+// async function updateCounter() {
+//     try {
+//         let res = await fetch(BIN_URL, {
+//             headers: {
+//                 "X-Access-Key": ACCESS_KEY
+//             }
+//         });
+//         let data = await res.json();
+//         let currentCount = data.record.count;
 
-        document.getElementById("visitorCount").innerText = newCount;
+//         let newCount = currentCount + 1;
 
-    } catch (err) {
-        console.error("Error:", err);
-    }
-}
+//         await fetch(BIN_URL, {
+//             method: "PUT",
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 "X-Access-Key": ACCESS_KEY
+//             },
+//             body: JSON.stringify({ count: newCount })
+//         });
 
-updateCounter();
+//         document.getElementById("visitorCount").innerText = newCount;
+
+//     } catch (err) {
+//         console.error("Error:", err);
+//     }
+// }
+
+// updateCounter();
